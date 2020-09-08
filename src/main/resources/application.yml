@@ -16,25 +16,26 @@ spring:
         - USER, ENDPOINT_ADMIN
     basic:
       enabled: false
-  datasource:
-      url: jdbc:h2:file:E:/_CodeRepo/skeleton-service
-      driverClassName: org.h2.Driver
-      username: sa
-      password:
-  h2:
-    console:
-      enabled: true
-      path: /h2
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/colors
+#    username: postgres
+#    password: angryBird1@
+#    hikari:
+#      connection-timeout: 20000
+#      maximum-pool-size: 5
+#      pool-name: HikariPoolZZZ
+
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
 
 logging:
   file:
     name: E://springbootLogs//skeleton-service.log
-  level:
-    - DEBUG
+#  level:
+#    - DEBUG
 
 management:
   endpoints:
@@ -47,6 +48,12 @@ management:
       enabled: false
     health:
       show-details: always
+  metrics:
+    web:
+      server:
+        request:
+          autotime:
+            enabled: true
 info:
   team:
     name: INFO TEXT

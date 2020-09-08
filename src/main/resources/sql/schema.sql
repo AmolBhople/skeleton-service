@@ -6,3 +6,6 @@ CREATE TABLE TBL_EMPLOYEES (
   last_name VARCHAR(250) NOT NULL,
   email VARCHAR(250) DEFAULT NULL
 );
+
+
+----  id serial PRIMARY KEY,   for postgreSQL
