@@ -5,26 +5,24 @@ spring:
     - dev
   application:
     name: skeleton-service
-  cloud:
-    config:
-      uri: http://localhost:8888
+
   security:
     user:
-      password: P@ssword1
+      password: P@ssword1@
       name: user
       roles:
         - USER, ENDPOINT_ADMIN
     basic:
       enabled: false
 
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/colors
-#    username: postgres
-#    password: angryBird1@
-#    hikari:
-#      connection-timeout: 20000
-#      maximum-pool-size: 5
-#      pool-name: HikariPoolZZZ
+  datasource:
+    url: jdbc:postgresql://localhost:5432/colors
+    username: postgres
+    password: angryBird1@
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+      pool-name: HikariPoolZZZ
 
   jpa:
     show-sql: true
